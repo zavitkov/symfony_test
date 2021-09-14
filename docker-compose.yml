@@ -3,6 +3,7 @@ version: '3.8'
 services:
   postgres-test:
     image: postgres:12.4-alpine
+    container_name: postgres_symfony_test
     restart: on-failure
     environment:
       POSTGRES_DB: symfony_test
@@ -19,6 +20,7 @@ services:
       context: .
       target: app_php
     image: zv-docker/php:dev
+    container_name: php_symfony_test
     restart: on-failure
     environment:
       APP_ENV: dev
@@ -39,6 +41,7 @@ services:
       context: .
       target: app_nginx
     image: zv-docker/nginx:dev
+    container_name: nginx_symfony_test
     restart: on-failure
     depends_on:
       - "php-test"
