@@ -106,6 +106,9 @@
     "friendsofphp/proxy-manager-lts": {
         "version": "v1.0.5"
     },
+    "justinrainbow/json-schema": {
+        "version": "5.2.11"
+    },
     "knplabs/doctrine-behaviors": {
         "version": "2.2.0"
     },
